@@ -16,7 +16,22 @@
 
   <script>
     // Write your code here
+    function foodTruckFeastival(menus){
+      let flatMenu = menus.flat();        
 
+      let combinedMenu = new Set();
+      // Set is used to create a collection of distinct values but can be of same datatype
+      flatMenu.forEach(item => combinedMenu.add(item));
+
+      const menuNode = document.querySelector("#combined-menu");
+      for(let item of combinedMenu){
+        let foodNode = document.createElement("li");
+        foodNode.innerText = item;
+        menuNode.appendChild(foodNode);
+      }
+    }
+
+    foodTruckFeastival([["Tacos", "Burger"], ["Pizza", "Momos"], ["Burger", "Noodles", "Pasta"], ["Momos", "Fried Rice", "Tacos"]])
   </script>
 </body>
 
