@@ -18,7 +18,19 @@
 
   <script>
     // Write your code here
-
+    const btnBlue = document.querySelector("#blue");
+    const btnPink = document.querySelector("#pink");
+    const btnGreen = document.querySelector("#green");
+     
+    btnBlue.addEventListener('click', () => {
+      document.body.style.background = "#0000FF";
+    })
+    btnPink.addEventListener('click', () => {
+      document.body.style.background = "#FFC0CB";
+    })
+    btnGreen.addEventListener('click', () => {
+      document.body.style.background = "#00FF00";
+    })
   </script>
 </body>
 
